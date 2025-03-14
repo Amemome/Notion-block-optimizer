@@ -2,6 +2,8 @@ import { NowRequest, NowResponse } from "@vercel/node";
 import { Client } from "@notionhq/client";
 
 export default async function handler(req: NowRequest, res: NowResponse) {
+
+  return res.status(200).json({ success: true, response: "Hello World!" });
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method Not Allowed" });
   }
