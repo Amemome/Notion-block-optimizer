@@ -1,4 +1,4 @@
-const mypage = "https://notion-block-optimizer.vercel.app/";
+const mypage = "https://notion-block-optimizer.vercel.app";
 
 export async function pushToNotion(apiKey: string, pageId: string) {
     try {
