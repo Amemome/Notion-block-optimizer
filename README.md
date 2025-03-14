@@ -30,4 +30,8 @@ A minimal-block writing tool that keeps your paragraphs structured while maximiz
 ## 🕖 TODO
 
 ✅ Notion API 를 사용해서 한 블럭에 개행문자 여러개 집어넣을 수 있는 방법 확인
-❎
+❎ Notion API 를 사용해서 페이지를 받아오고, 불필요한 블럭들을 합쳐서 다시 넣어준다.
+❎ 대충 마크다운 문법으로 작성된 것을 Notion 에 집어넣기 -> 근데 단락으로 구분을 잘 하기.
+❎ ul 이나 ol 같은 태그들은 어쩔 수 없이 다른 블럭으로 처리될 수 밖에 없는데..
+❎ text 가 반복되면 그걸 최적화하자.
+
