@@ -1,9 +1,9 @@
-const { Client } = require("@notionhq/client");
+import { Client } from "@notionhq/client";
 
 /**
  * Vercel Serverless API 핸들러
  */
-module.exports = async function (req, res) {
+export default async function (req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method Not Allowed" });
   }

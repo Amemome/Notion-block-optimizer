@@ -2,7 +2,7 @@ const mypage = "https://notion-block-optimizer.vercel.app";
 
 export async function pushToNotion(apiKey: string, pageId: string) {
     try {
-        const response = await fetch(`${mypage}/api/hi`, {
+        const response = await fetch(`${mypage}/api/notion-push`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
