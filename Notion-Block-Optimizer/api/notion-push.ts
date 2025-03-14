@@ -1,9 +1,6 @@
-import { NowRequest, NowResponse } from "@vercel/node";
-import { Client } from "@notionhq/client";
+const { Client } = require("@notionhq/client");
 
-export default async function handler(req: NowRequest, res: NowResponse) {
-
-  return res.status(200).json({ success: true, response: "Hello World!" });
+module.exports = async function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method Not Allowed" });
   }
@@ -35,13 +32,8 @@ export default async function handler(req: NowRequest, res: NowResponse) {
       ],
     });
 
-    // ✅ CORS 문제 방지 헤더 추가
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
-    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
-
-    return res.status(200).json({ success: true, response });
+    res.status(200).json({ success: true, response });
   } catch (error) {
-    return res.status(500).json({ error: "Failed to add block", details: error });
+    res.status(500).json({ error: "Failed to add block", details: error });
   }
-}
+};
